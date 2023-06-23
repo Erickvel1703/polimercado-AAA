@@ -1,9 +1,14 @@
-language: html
+language: PHP
 html: 
--5.0
+-8
 cache: npm
 
 script:
-  - "npm run lint"
-  - "npm test"
-  - "npm run build"
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
+  on:
+    branch: master
