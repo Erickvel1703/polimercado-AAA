@@ -1,0 +1,9 @@
+language: html
+html: 
+-5.0
+cache: npm
+
+script:
+  - "npm run lint"
+  - "npm test"
+  - "npm run build"
